@@ -26,8 +26,6 @@ Import the `authenticate` function from the `authenticate.js` module in your Jav
 
 <pre>
 const { authenticate } = require('./authenticate');
-Call the authenticate function with the provided string to perform the authentication:
-
 const providedString = "String";```
 
 authenticate(providedString)
