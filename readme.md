@@ -14,8 +14,7 @@ This module provides a convenient way to perform authentication by interacting w
 
 1. Install the required dependencies by running the following command:
 
-   ```bash
-   npm install node-fetch
+   ```bash npm install node-fetch
 
 
 ### Python
