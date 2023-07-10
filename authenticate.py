@@ -1,7 +1,7 @@
 import requests
 
 def auth(provided_string):
-    url = "https://ramlov.org/authenticate/"
+    url = "https://website.website/"
 
     params = {'string': provided_string}
 

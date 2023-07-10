@@ -1,7 +1,7 @@
 <?php
 $acceptedStrings = [
-    'AipgnLUbcCGLxfum4V', 
-    '6N0wLHdSy0wha55DrM'
+    '', 
+    ''
 ];
 
 $providedString = $_GET['string'] ?? '';

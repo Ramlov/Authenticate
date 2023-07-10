@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 async function authenticate(providedString) {
-  const url = "https://ramlov.org/authenticate/";
+  const url = "https://website.website/";
 
   const params = new URLSearchParams({ string: providedString });
 
