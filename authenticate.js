@@ -1,19 +1,23 @@
 const fetch = require('node-fetch');
 
-const url = "https://ramlov.org/authenticate/";
-const providedString = "String";
+async function authenticate(providedString) {
+  const url = "https://ramlov.org/authenticate/";
 
-const params = new URLSearchParams({ string: providedString });
+  const params = new URLSearchParams({ string: providedString });
 
-fetch(`${url}?${params}`)
-  .then(response => response.text())
-  .then(result => {
-    if (result.startsWith('Ok - Normal authenticate')) {
-      console.log('Validation successful:', result);
-    } else if (result.startsWith('Reset')) {
-      console.log('Reset password:', result);
-    } else {
-      console.log('Validation failed:', result);
-    }
-  })
-  .catch(error => console.error('Error:', error));
+  const response = await fetch(`${url}?${params}`);
+  const result = await response.text();
+
+  if (result.startsWith('Ok - Normal authenticate')) {
+    return 'Validation successful: ' + result;
+  } else if (result.startsWith('Reset')) {
+    /*Reset something*/
+    return 'Reset: ' + result;
+  } else {
+    return 'Validation failed: ' + result;
+  }
+}
+
+module.exports = {
+  authenticate
+};
